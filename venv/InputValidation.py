@@ -5,22 +5,23 @@ import re
 def inputString(title):
     validStr = False
     while not validStr:
-        str = input(title)
-        if bool(re.search("[A-Za-z\\.\s]+", str)) and (str.isspace() == False):
+        strInput = input(title)
+        if bool(re.search("[A-Za-z\\.\s]+", strInput)) and (strInput.isspace() == False):
             validStr = True
         else:
             print("Input invalid. Please only enter alphabetic values.")
-    return str
+    return strInput
 
 def inputInt(title):
     validInt = False
     while not validInt:
-        int = input(title)
-        if int.isdigit() and (int(int) >= 0):
+        intInput = input(title)
+        if intInput.isdigit() and (int(intInput) >= 0):
             validInt = True
         else:
             print("Input invalid. Please enter only a valid number.")
-    return int
+    return intInput
+
 
 def inputTime(title):
     validTime = False
