@@ -36,7 +36,6 @@ else:
                         print("Input Invalid. Please enter either Y or N.")
 
 while runProgram:
-
       print("\nRESTAURANT RESERVATION SYSTEM\n\n"
             "System Menu\n\n"
             "a. View all Reservations\n"

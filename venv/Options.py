@@ -3,12 +3,6 @@
 # import for Input Validation class
 import InputValidation
 
-# Initialization of variables to be used in functions
-adultArr = []
-childArr = []
-adultSubtotal = 0
-childSubtotal = 0
-
 # Functions for each option
 def viewRes():
     resFile = open("reservations.txt", "r")
@@ -16,6 +10,7 @@ def viewRes():
     if len(resLines) < 2:
         print("Cannot view records. File is empty!")
     else:
+
         resFile.seek(0)
         for count, line in enumerate(resLines):
             resData = line.strip().split("|")
@@ -27,6 +22,7 @@ def viewRes():
         resFile.close()
 
 def makeRes():
+
     resFile = open("reservations.txt", "a+")
     resFile.seek(0)
     date = InputValidation.inputDate("Date: ")
@@ -104,6 +100,8 @@ def genReport():
         resData = line.strip().split("|")
 
         if count == 0:
+            adultSubtotal = 0
+            childSubtotal = 0
             subtotal = [None]
             # executed if reading Table Header
             repFile.writelines("#".ljust(8) + resData[0].ljust(20) + resData[1].ljust(16) + resData[2].ljust(20) + resData[3].center(12) + resData[4].center(12) + "\tSubtotal\n")
