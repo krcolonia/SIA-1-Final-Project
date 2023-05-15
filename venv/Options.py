@@ -60,7 +60,7 @@ def delRes():
                     # executed if reading Table Data
                     print("{}".format(str(count)).ljust(8) + resData[0].ljust(20) + resData[1].ljust(16) + resData[2].ljust(
                         20) + resData[3].center(12) + resData[4].center(12))
-            lineToDel = InputValidation.inputInt("\nPlease enter the reservation to be deleted [1-{}]: ".format(len(resLines)-1))
+            lineToDel = InputValidation.inputInt("\nPlease enter the reservation to be deleted [ 1 - {} ]: ".format(len(resLines)-1))
             if int(lineToDel) < 1:
                 print("Please only enter positive values")
             elif int(lineToDel) >= len(resLines):
